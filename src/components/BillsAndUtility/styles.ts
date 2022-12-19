@@ -17,6 +17,13 @@ export const Container = styled.div`
   margin-top: 32px;
 `;
 
+export const TitleContainer = styl("div")`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+`
+
 export const Inner = styled.div`
   max-width: 1440px;
   width: 100%;

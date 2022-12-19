@@ -1,8 +1,8 @@
-
+import { Tooltip } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import Fresh from "public/images/promo/fresh-arrival.png";
-import { MdKeyboardArrowRight } from "react-icons/md";
+import { MdInfoOutline, MdKeyboardArrowRight } from "react-icons/md";
 import { Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -12,8 +12,7 @@ import CustomInput from "../CustomInput";
 import UnstyledButtonCustom from "../UnstyledButtonCustom";
 import * as S from "./styles";
 
-
-const BillsAndUtility = () => {
+const BillsAndUtility = (): JSX.Element => {
   return (
     <S.Container>
       <S.Inner>
@@ -38,7 +37,9 @@ const BillsAndUtility = () => {
           </Swiper>
         </S.LeftSlider>
         <S.RightSlider>
-          <h4>Cupons e vantagens</h4>
+          <S.TitleContainer>
+            <h4>Cupons e vantagens</h4>
+          </S.TitleContainer>
           <S.CustomTabsUnstyled
             style={{ width: "100%" }}
             defaultValue={0}
@@ -75,7 +76,21 @@ const BillsAndUtility = () => {
                 }}
               >
                 <S.CodeTransactionContainer>
-                  <p>Código do cupon</p>
+                  <S.TitleContainer>
+                    <p>Código do cupon</p>
+                    <Tooltip
+                      title="Insira o código que obteve em um de nossos parceiros e resgate seu cupon"
+                      children={
+                        <span style={{ display: "flex" }}>
+                          <MdInfoOutline
+                            width={38}
+                            height={38}
+                            color="#212121"
+                          />
+                        </span>
+                      }
+                    />
+                  </S.TitleContainer>
                   <CustomInput
                     role="input"
                     placeholder="Ex: 276NHVF387XN3487"
