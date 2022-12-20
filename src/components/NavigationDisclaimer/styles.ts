@@ -11,7 +11,7 @@ export const Container = styled.div`
 
   height: 40px;
 
-  background-color: #212121;
+  background-color: ${({ theme }) => theme.colors.darkGray};
 
   flex: none;
   order: 0;

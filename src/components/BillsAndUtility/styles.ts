@@ -22,7 +22,7 @@ export const TitleContainer = styl("div")`
   display: flex;
   align-items: center;
   gap: 8px;
-`
+`;
 
 export const Inner = styled.div`
   max-width: 1440px;
@@ -53,8 +53,8 @@ export const RightSlider = styled.div`
   width: 1024px;
   height: 332px;
 
-  background: #ffffff;
-  border: 1px solid #e2e2e2;
+  background: ${({ theme }) => theme.colors.darkGray};
+  border: 1px solid ${({ theme }) => theme.colors.lightGray};
   border-radius: 8px;
 
   h4 {
@@ -73,7 +73,7 @@ export const RightSlider = styled.div`
     text-align: center;
 
     /* Black */
-    color: #212121;
+    color: ${({ theme }) => theme.colors.white};
   }
 `;
 
@@ -86,7 +86,7 @@ export const CodeTransactionContainer = styled.div`
 
 export const CustomTabsUnstyled = styl(TabsUnstyled)``;
 
-export const Tab = styl(TabUnstyled)`
+export const Tab = styled(TabUnstyled)`
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -101,12 +101,13 @@ export const Tab = styl(TabUnstyled)`
   margin: 0px;
   padding: 0px;
 
-  color: #828282;
+  color: ${({ theme }) => theme.colors.white};
   cursor: pointer;
   background-color: transparent;
   border: none;
 
   &:hover {
+    color: ${({ theme }) => theme.colors.secondary};
   }
 
   &:focus {
@@ -114,8 +115,8 @@ export const Tab = styl(TabUnstyled)`
   }
 
   &.${tabUnstyledClasses.selected} {
-    background-color: #fff;
-    color: #52057b;
+    background-color: ${({ theme }) => theme.colors.darkGray};
+    color: ${({ theme }) => theme.colors.primary};
   }
 
   &.${buttonUnstyledClasses.disabled} {
@@ -124,7 +125,7 @@ export const Tab = styl(TabUnstyled)`
   }
 `;
 
-export const TabsList = styl(TabsListUnstyled)`
+export const TabsList = styled(TabsListUnstyled)`
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -132,7 +133,7 @@ export const TabsList = styl(TabsListUnstyled)`
   gap: 16px;
   width: 100%;
   height: 72px;
-  border-bottom: 1px solid #e2e2e2;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.lightGray};
 `;
 
 export const TabPanel = styl(TabPanelUnstyled)`

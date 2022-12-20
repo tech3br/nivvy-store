@@ -42,8 +42,6 @@ export const CategoriesContainer = styled.div`
 
       /* Black */
 
-      color: #212121;
-
       a {
         display: flex;
         flex-direction: column;
@@ -53,30 +51,12 @@ export const CategoriesContainer = styled.div`
         height: 138px;
         max-width: 80px;
 
+        color: ${({ theme }) => theme.colors.white};
+
         :hover {
           background-color: #e1e1e1;
+          color: ${({ theme }) => theme.colors.darkGray};
         }
-      }
-
-      p {
-        margin-bottom: 0px;
-        margin-top: 16px;
-        line-break: break-all;
-
-        /* Paragraf/Medium */
-
-        font-family: "Inter";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 140%;
-        /* or 22px */
-
-        text-align: center;
-
-        /* Black */
-
-        color: #212121;
       }
     }
   }
@@ -92,6 +72,7 @@ export const Inner = styled.div`
   gap: 32px;
 
   h1 {
+    color: ${({ theme }) => theme.colors.white};
     margin: 0;
   }
 `;
@@ -107,7 +88,7 @@ export const CategoryIconBackground = styled.div`
   width: 60px;
   height: 60px;
 
-  background-color: #f9f9f9;
+  background-color: ${({ theme }) => theme.colors.white};
   border-radius: 72px;
 `;
 
@@ -118,4 +99,19 @@ export const CategoryIcon = styled(Image)`
   align-items: center;
 `;
 
-export const CategoryName = styled.p``;
+export const CategoryName = styled.p`
+  margin-bottom: 0px;
+  margin-top: 16px;
+  line-break: break-all;
+
+  /* Paragraf/Medium */
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  /* or 22px */
+
+  text-align: center;
+`;

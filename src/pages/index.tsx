@@ -1,6 +1,7 @@
 import Banners from "../components/Banners";
 import BillsAndUtility from "../components/BillsAndUtility";
 import Categories from "../components/Categories";
+import FlashOffers from "../components/FlashOffers";
 import Header from "../components/Header";
 import TopSearch from "../components/TopSearch";
 
@@ -13,6 +14,7 @@ function Home() {
       <Banners />
       <BillsAndUtility />
       <Categories />
+      <FlashOffers />
     </>
   );
 }

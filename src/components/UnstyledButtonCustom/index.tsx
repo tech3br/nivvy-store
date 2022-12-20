@@ -3,7 +3,7 @@ import ButtonUnstyled, {
   ButtonUnstyledProps,
   buttonUnstyledClasses,
 } from "@mui/base/ButtonUnstyled";
-import { styled } from "@mui/system";
+import styled from "styled-components";
 
 export interface Props extends ButtonUnstyledProps {
   children: React.ReactNode;
@@ -49,7 +49,7 @@ const CustomButtonRoot = styled(ButtonUnstyled)`
 
   font-family: "Inter";
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   /* identical to box height */
@@ -59,16 +59,15 @@ const CustomButtonRoot = styled(ButtonUnstyled)`
 
   /* Style */
 
-  color: #ffffff;
-
-  background-color: ${purple[50]};
+  color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.primary};
   border-radius: 8px;
   transition: all 150ms ease;
   cursor: pointer;
   border: none;
 
   &:hover {
-    background-color: ${purple[100]};
+    background-color: ${({ theme }) => theme.colors.secondary};
   }
 
   &.${buttonUnstyledClasses.active} {
