@@ -8,18 +8,19 @@ import * as S from "./styles";
 
 const styles: StylesConfig<ColourOption, false> = {
   singleValue: () => ({
-    color: "#212121",
+    color: "#fcfcfc",
     fontSize: 14,
     display: "flex",
     alignItems: "center",
     textAlign: "center",
   }),
-  dropdownIndicator: () => ({ color: "#212121", fontSize: 14 }),
+  dropdownIndicator: () => ({ color: "#fcfcfc", fontSize: 14 }),
   control: () => ({
     border: "none",
     display: "flex",
     alignItems: "center",
     marginLeft: "8px",
+    color: "#fcfcfc"
   }),
   valueContainer: () => ({ display: "flex" }),
 };

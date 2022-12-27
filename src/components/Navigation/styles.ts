@@ -1,5 +1,5 @@
-import Image from "next/image";
-import styled from "styled-components";
+import Image from 'next/image';
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
@@ -32,6 +32,10 @@ export const LogoContainer = styled.div`
     font-weight: 600;
     margin: 0;
     padding: 0;
+  }
+
+  p {
+    color: ${({ theme }) => theme.colors.white};
   }
 `;
 
@@ -128,7 +132,7 @@ export const ProfilePersonInfo = styled.div`
 export const ProfilePersonInfoName = styled.p`
   /* Body/Medium */
 
-  font-family: "Inter";
+  font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -146,7 +150,7 @@ export const ProfilePersonInfoName = styled.p`
 export const ProfilePersonInfoStatus = styled.p`
   /* Caption/Regular */
 
-  font-family: "Inter";
+  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
