@@ -1,0 +1,11 @@
+services:
+  app:
+    container_name: app
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    restart: always    
+    volumes:
+      - ./:/app
+    ports:
+      - '3001:3001'
