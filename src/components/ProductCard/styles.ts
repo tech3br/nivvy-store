@@ -1,7 +1,5 @@
-import LinearProgress, {
-  linearProgressClasses,
-} from "@mui/material/LinearProgress";
-import styled from "styled-components";
+import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
+import styled from 'styled-components';
 
 export const Container = styled.div`
   position: relative;
@@ -11,7 +9,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
-  width: 242px;
+  width: 282px;
   height: auto;
 
   /* Style */
@@ -30,16 +28,24 @@ export const Container = styled.div`
     height: 24px;
     right: 0;
     position: absolute;
+    z-index: 10;
   }
 `;
 
 export const HeaderImage = styled.div`
+  position: relative;
   display: flex;
   width: 100%;
-  height: 176px;
+  height: 306px;
 
   background: #e6e8ec;
   border-radius: 8px 8px 0px 0px;
+
+  img {
+    border-radius: 8px 8px 0px 0px;
+    object-fit: cover;
+    object-position: 100% 90%;
+  }
 `;
 
 export const ProductCardBody = styled.div`
@@ -55,27 +61,17 @@ export const ProductTypeDescription = styled.p`
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-
-  /* Caption/Regular */
-
   font-family: "Inter";
   font-style: normal;
   font-weight: 300;
   font-size: 12px;
   line-height: 15px;
-  /* identical to box height */
-
   display: flex;
   align-items: center;
-
-  /* Disable */
-
   color: #828282;
 `;
 
 export const ProductTypeTitle = styled.p`
-  /* Paragraf/Medium */
-
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;

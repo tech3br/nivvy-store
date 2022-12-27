@@ -1,7 +1,7 @@
 export type ProductProps = {
   title: string;
   type: string;
-  img?: string;
+  imgSrc?: string;
   price: string;
   promotionalPrice?: string;
   favorite?: boolean;

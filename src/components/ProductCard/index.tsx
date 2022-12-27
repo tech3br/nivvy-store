@@ -1,13 +1,14 @@
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-// import Image from "next/image";
-import React from "react";
-import { FcLike, FcLikePlaceholder } from "react-icons/fc";
-import * as S from "./styles";
-import { ProductProps } from "./types";
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Image from 'next/image';
+import React from 'react';
+import { FcLike, FcLikePlaceholder } from 'react-icons/fc';
+
+import * as S from './styles';
+import { ProductProps } from './types';
 
 const ProductCard = ({
-  img,
+  imgSrc,
   discountText,
   price,
   promotionalPrice,
@@ -23,15 +24,15 @@ const ProductCard = ({
     <S.Container>
       {favorite ? <FcLike /> : <FcLikePlaceholder />}
       <S.HeaderImage>
-        {/* <Image src={Offer} width={322} height={332} alt={title} /> */}
+        <Image src={imgSrc} fill alt={title} unoptimized />
       </S.HeaderImage>
       <S.ProductCardBody>
         <S.ProductTypeDescription>{type}</S.ProductTypeDescription>
         <S.ProductTypeTitle>{title}</S.ProductTypeTitle>
         <S.PriceContainer>
           <S.ProductPrice>
-            <s>{price}</s>
-            <strong>{promotionalPrice}</strong>
+            {!promotionalPrice ? <strong>{price}</strong> : <s>{price}</s>}
+            {promotionalPrice && <strong>{promotionalPrice}</strong>}
           </S.ProductPrice>
           {!!discountText && (
             <S.PromotionDiscount>
@@ -40,12 +41,12 @@ const ProductCard = ({
           )}
         </S.PriceContainer>
         <S.ProgressEndPromotion>
-          <Box sx={{ height: "10px", width: "100%" }}>
+          <Box sx={{ height: '10px', width: '100%' }}>
             <S.BorderLinearProgress variant="determinate" value={progress} />
           </Box>
           <Typography
             variant="body1"
-            style={{ textAlign: "center" }}
+            style={{ textAlign: 'center' }}
           >{`${soldItems}/${totalItems} vendidos`}</Typography>
         </S.ProgressEndPromotion>
       </S.ProductCardBody>
