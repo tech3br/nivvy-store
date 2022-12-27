@@ -1,22 +1,22 @@
-import { ThemeProvider } from 'styled-components'
-import GlobalStyles from '../src/styles/global'
-import theme from 'styles/theme'
+import { ThemeProvider } from "styled-components";
+import theme from "styles/theme";
+import GlobalStyles from "../src/styles/global";
 
 export const parameters = {
   backgrounds: {
-    default: 'nivvy-light',
+    default: "nivvy-light",
     values: [
       {
-        name: 'nivvy-light',
-        value: theme.colors.white
+        name: "nivvy-light",
+        value: theme.colors.white,
       },
       {
-        name: 'nivvy-dark',
-        value: theme.colors.mainBg
-      }
-    ]
-  }
-}
+        name: "nivvy-dark",
+        value: theme.colors.mainBg,
+      },
+    ],
+  },
+};
 
 export const decorators = [
   (Story) => (
@@ -24,5 +24,6 @@ export const decorators = [
       <GlobalStyles />
       <Story />
     </ThemeProvider>
-  )
-]
+  ),
+];
+
