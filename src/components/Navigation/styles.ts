@@ -90,7 +90,7 @@ export const ProfileContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  height: 38px;
+  height: auto;
   gap: 24px;
 
   svg {
@@ -98,7 +98,7 @@ export const ProfileContainer = styled.div`
       cursor: pointer;
 
       path {
-        color: #000000;
+        color: yellow;
         font-weight: 800;
       }
     }
@@ -112,9 +112,8 @@ export const ProfilePerson = styled.div`
 export const ProfilePersonPicture = styled(Image)`
   width: 48px;
   height: 48px;
+  border: none;
   border-radius: 50%;
-  padding: 8px;
-  background-color: #f1f1f1;
   margin-right: 8px;
 `;
 
@@ -130,35 +129,15 @@ export const ProfilePersonInfo = styled.div`
 `;
 
 export const ProfilePersonInfoName = styled.p`
-  /* Body/Medium */
-
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
-  /* identical to box height */
 
   display: flex;
   align-items: center;
 
-  /* Black */
-
-  color: #212121;
+  color: #F1F1F1;
 `;
 
-export const ProfilePersonInfoStatus = styled.p`
-  /* Caption/Regular */
-
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 15px;
-  /* identical to box height */
-
-  display: flex;
-  align-items: center;
-
-  color: #129a00;
-`;

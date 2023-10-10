@@ -100,7 +100,7 @@ const Navigation = (): JSX.Element => {
           </S.LocationContainer>
         </S.LogoContainer>
         <S.SearchBarContainer>
-          <input type="text" placeholder="Procurar em Nivvy Shop" />
+          <input type="text" placeholder="Procurar em Nivvy Store" />
           <Select
             styles={filterStyles}
             placeholder="Categoria"
@@ -110,7 +110,7 @@ const Navigation = (): JSX.Element => {
           <GoSearch />
         </S.SearchBarContainer>
         <S.ProfileContainer>
-          <MdNotifications width={32} height={32} color="#828282" />
+          <MdNotifications width={42} height={62} color="#828282" />
           <MdStorefront width={42} height={42} color="#828282" />
           <MdShoppingCart width={42} height={42} color="#828282" />
           <S.ProfilePerson>
@@ -122,7 +122,6 @@ const Navigation = (): JSX.Element => {
             />
             <S.ProfilePersonInfo>
               <S.ProfilePersonInfoName>Pikachu</S.ProfilePersonInfoName>
-              <S.ProfilePersonInfoStatus>Online</S.ProfilePersonInfoStatus>
             </S.ProfilePersonInfo>
           </S.ProfilePerson>
         </S.ProfileContainer>
